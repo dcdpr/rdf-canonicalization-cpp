@@ -1,9 +1,12 @@
 #ifndef RDFCANON_CPP_CANONICALIZATIONPROCESSOR_H
 #define RDFCANON_CPP_CANONICALIZATIONPROCESSOR_H
 
+#include <string>
+
 #include <jsonld-cpp/jsoninc.h>
 
 class JsonLdOptions;
+
 
 namespace CanonicalizationProcessor {
 

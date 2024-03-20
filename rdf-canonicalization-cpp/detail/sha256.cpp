@@ -1,4 +1,5 @@
-#include "jsonld-cpp/sha256.h"
+#include "rdf-canonicalization-cpp/detail/sha256.h"
+
 #include <cstring>
 
 #define SHA2_SHFR(x, n)    (x >> n)

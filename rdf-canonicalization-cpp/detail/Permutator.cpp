@@ -1,23 +1,21 @@
-#include "rdf-canonicalization-cpp/Permutator.h"
+#include "rdf-canonicalization-cpp/detail/Permutator.h"
 
 #include <utility>
 #include <algorithm>
 
-using std::vector;
-using std::map;
 using std::string;
 
-Permutator::Permutator(vector<string> istrings)
-        : strings(std::move(istrings)), done(false)
+Permutator::Permutator(std::vector<string> strings)
+        : strings(std::move(strings)), done(false)
 {
-    std::sort(strings.begin(), strings.end());
+    std::sort(this->strings.begin(), this->strings.end());
 }
 
 bool Permutator::hasNext() const {
     return !done;
 }
 
-vector<string> Permutator::next() {
+std::vector<string> Permutator::next() {
     std::vector<std::string> result;
     std::copy(strings.begin(), strings.end(),
               std::back_inserter(result));

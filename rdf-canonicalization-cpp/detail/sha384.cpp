@@ -1,9 +1,9 @@
-#include "jsonld-cpp/sha384.h"
+#include "rdf-canonicalization-cpp/detail/sha384.h"
+
 #include <cstring>
 
 #define SHA2_SHFR(x, n)    (x >> n)
 #define SHA2_ROTR(x, n)   ((x >> n) | (x << ((sizeof(x) << 3) - n)))
-#define SHA2_ROTL(x, n)   ((x << n) | (x >> ((sizeof(x) << 3) - n)))
 #define SHA2_CH(x, y, z)  ((x & y) ^ (~x & z))
 #define SHA2_MAJ(x, y, z) ((x & y) ^ (x & z) ^ (y & z))
 #define SHA512_F1(x) (SHA2_ROTR(x, 28) ^ SHA2_ROTR(x, 34) ^ SHA2_ROTR(x, 39))
@@ -12,32 +12,32 @@
 #define SHA512_F4(x) (SHA2_ROTR(x, 19) ^ SHA2_ROTR(x, 61) ^ SHA2_SHFR(x,  6))
 #define SHA2_UNPACK32(x, str)                 \
 {                                             \
-    *((str) + 3) = (uint8) ((x)      );       \
-    *((str) + 2) = (uint8) ((x) >>  8);       \
-    *((str) + 1) = (uint8) ((x) >> 16);       \
-    *((str) + 0) = (uint8) ((x) >> 24);       \
+    *((str) + 3) = static_cast<uint8> ((x)      );       \
+    *((str) + 2) = static_cast<uint8> ((x) >>  8);       \
+    *((str) + 1) = static_cast<uint8> ((x) >> 16);       \
+    *((str) + 0) = static_cast<uint8> ((x) >> 24);       \
 }
 #define SHA2_UNPACK64(x, str)                 \
 {                                             \
-    *((str) + 7) = (uint8) ((x)      );       \
-    *((str) + 6) = (uint8) ((x) >>  8);       \
-    *((str) + 5) = (uint8) ((x) >> 16);       \
-    *((str) + 4) = (uint8) ((x) >> 24);       \
-    *((str) + 3) = (uint8) ((x) >> 32);       \
-    *((str) + 2) = (uint8) ((x) >> 40);       \
-    *((str) + 1) = (uint8) ((x) >> 48);       \
-    *((str) + 0) = (uint8) ((x) >> 56);       \
+    *((str) + 7) = static_cast<uint8> ((x)      );       \
+    *((str) + 6) = static_cast<uint8> ((x) >>  8);       \
+    *((str) + 5) = static_cast<uint8> ((x) >> 16);       \
+    *((str) + 4) = static_cast<uint8> ((x) >> 24);       \
+    *((str) + 3) = static_cast<uint8> ((x) >> 32);       \
+    *((str) + 2) = static_cast<uint8> ((x) >> 40);       \
+    *((str) + 1) = static_cast<uint8> ((x) >> 48);       \
+    *((str) + 0) = static_cast<uint8> ((x) >> 56);       \
 }
 #define SHA2_PACK64(str, x)                   \
 {                                             \
-    *(x) =   ((uint64) *((str) + 7)      )    \
-           | ((uint64) *((str) + 6) <<  8)    \
-           | ((uint64) *((str) + 5) << 16)    \
-           | ((uint64) *((str) + 4) << 24)    \
-           | ((uint64) *((str) + 3) << 32)    \
-           | ((uint64) *((str) + 2) << 40)    \
-           | ((uint64) *((str) + 1) << 48)    \
-           | ((uint64) *((str) + 0) << 56);   \
+    *(x) =   (static_cast<uint64> (*((str) + 7))      )    \
+           | (static_cast<uint64> (*((str) + 6)) <<  8)    \
+           | (static_cast<uint64> (*((str) + 5)) << 16)    \
+           | (static_cast<uint64> (*((str) + 4)) << 24)    \
+           | (static_cast<uint64> (*((str) + 3)) << 32)    \
+           | (static_cast<uint64> (*((str) + 2)) << 40)    \
+           | (static_cast<uint64> (*((str) + 1)) << 48)    \
+           | (static_cast<uint64> (*((str) + 0)) << 56);   \
 }
 
 const unsigned long long SHA384::sha512_k[80] = //ULL = uint64
@@ -98,8 +98,8 @@ void SHA384::init()
 
 void SHA384::update(const unsigned char *message, std::size_t len)
 {
-    unsigned int block_nb;
-    unsigned int new_len, rem_len, tmp_len;
+    std::size_t block_nb;
+    std::size_t new_len, rem_len, tmp_len;
     const unsigned char *shifted_message;
     tmp_len = SHA384_512_BLOCK_SIZE - m_len;
     rem_len = len < tmp_len ? len : tmp_len;
@@ -137,10 +137,10 @@ std::string SHA384::final()
     pm_len = block_nb << 7;
     memset(m_block + m_len, 0, pm_len - m_len);
     m_block[m_len] = 0x80;
-    SHA2_UNPACK32(len_b, m_block + pm_len - 4);
+    SHA2_UNPACK32(len_b, m_block + pm_len - 4)
     transform(m_block, block_nb);
     for (int i = 0 ; i < 6; i++) {
-        SHA2_UNPACK64(m_h[i], &digest[i << 3]);
+        SHA2_UNPACK64(m_h[i], &digest[i << 3])
     }
 
     char buf[2*SHA384::DIGEST_SIZE+1];
@@ -164,7 +164,7 @@ void SHA384::transform(const unsigned char *message, std::size_t block_nb)
     for (i = 0; i < block_nb; i++) {
         sub_block = message + (i << 7);
         for (j = 0; j < 16; j++) {
-            SHA2_PACK64(&sub_block[j << 3], &w[j]);
+            SHA2_PACK64(&sub_block[j << 3], &w[j])
         }
         for (j = 16; j < 80; j++) {
             w[j] =  SHA512_F4(w[j -  2]) + w[j -  7] + SHA512_F3(w[j - 15]) + w[j - 16];

@@ -8,11 +8,16 @@
 
 // Usage: jsonld2rdf <filename>
 
-#include <rdf-canonicalization-cpp/CanonicalizationProcessor.h>
-#include <jsonld-cpp/FileLoader.h>
-#include <jsonld-cpp/JsonLdOptions.h>
 #include <iostream>
 #include <fstream>
+#include <iterator>
+#include <algorithm>
+
+#include <jsonld-cpp/FileLoader.h>
+#include <jsonld-cpp/JsonLdOptions.h>
+
+#include <rdf-canonicalization-cpp/CanonicalizationProcessor.h>
+
 
 int main (int argc, char *argv[]) {
 

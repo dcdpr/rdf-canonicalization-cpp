@@ -4,9 +4,6 @@ elseif(CMAKE_CXX_COMPILER_ID MATCHES ".*Clang")
   add_definitions(-Wno-weak-vtables -Wno-exit-time-destructors -Wno-global-constructors)
 endif()
 
-#
-# Build common test files into lib so they only need to be compiled once
-#
 add_library(
     librdf-canonicalization-cpp_test STATIC
     main.cpp
@@ -39,7 +36,6 @@ add_executable(
     test_Sha384.cpp
 )
 
-target_compile_features(UnitTests_rdf-canonicalization-cpp PRIVATE cxx_std_11)
 set_target_properties(UnitTests_rdf-canonicalization-cpp PROPERTIES CXX_EXTENSIONS OFF)
 target_compile_definitions(UnitTests_rdf-canonicalization-cpp PUBLIC TEST_RESOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}/")
 
@@ -61,7 +57,6 @@ foreach(ALGO ${ALGORITHMS})
         test_RDFCanonicalizationProcessor-${ALGO}.cpp
     )
 
-    target_compile_features(UnitTests_RDFCanonicalizationProcessor_${ALGO}_rdf-canonicalization-cpp PRIVATE cxx_std_11)
     set_target_properties(UnitTests_RDFCanonicalizationProcessor_${ALGO}_rdf-canonicalization-cpp PROPERTIES CXX_EXTENSIONS OFF)
     target_compile_definitions(UnitTests_RDFCanonicalizationProcessor_${ALGO}_rdf-canonicalization-cpp PUBLIC TEST_RESOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}/")
 

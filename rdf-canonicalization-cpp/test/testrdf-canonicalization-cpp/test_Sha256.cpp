@@ -1,4 +1,4 @@
-#include <jsonld-cpp/sha256.h>
+#include "rdf-canonicalization-cpp/detail/sha256.h"
 
 #include <gtest/gtest.h>
 #pragma clang diagnostic push

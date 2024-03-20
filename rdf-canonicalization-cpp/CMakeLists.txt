@@ -8,7 +8,6 @@ cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 project(rdf-canonicalization-cpp-library VERSION ${RDFCANONCPP_VERSION}
         LANGUAGES CXX )
 
-set(CMAKE_CXX_STANDARD 11)
 include(GNUInstallDirs)
 
 find_package(jsonld-cpp 0.5.0 CONFIG REQUIRED)
@@ -16,28 +15,36 @@ find_package(jsonld-cpp 0.5.0 CONFIG REQUIRED)
 # Define library target
 
 set(LIB_HEADER_FILES
-        ${CMAKE_CURRENT_SOURCE_DIR}/CanonicalizationProcessor.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/Permutator.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/RDFCanonicalizationProcessor.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/sha256.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/sha384.h
-        )
+        CanonicalizationProcessor.h
+)
+
+set(LIB_PRIVATE_HEADER_FILES
+        detail/Permutator.h
+        detail/RDFCanonicalizationProcessor.h
+        detail/sha256.h
+        detail/sha384.h
+)
 
 set(LIB_SOURCE_FILES
-        ${CMAKE_CURRENT_SOURCE_DIR}/CanonicalizationProcessor.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/Permutator.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/RDFCanonicalizationProcessor.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/sha256.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/sha384.cpp
+        CanonicalizationProcessor.cpp
+        detail/Permutator.cpp
+        detail/RDFCanonicalizationProcessor.cpp
+        detail/sha256.cpp
+        detail/sha384.cpp
         )
 
-add_library(rdf-canonicalization-cpp STATIC ${LIB_HEADER_FILES} ${LIB_SOURCE_FILES})
+add_library(rdf-canonicalization-cpp STATIC ${LIB_HEADER_FILES} ${LIB_PRIVATE_HEADER_FILES} ${LIB_SOURCE_FILES})
 add_library(rdf-canonicalization-cpp::rdf-canonicalization-cpp ALIAS rdf-canonicalization-cpp)
 
 
 set_property(
         TARGET rdf-canonicalization-cpp
-        PROPERTY PUBLIC_HEADER ${LIB_HEADER_FILES} ${LIB_INT_HEADER_FILES}
+        PROPERTY PUBLIC_HEADER ${LIB_HEADER_FILES}
+)
+
+set_property(
+        TARGET rdf-canonicalization-cpp
+        PROPERTY PRIVATE_HEADER ${LIB_PRIVATE_HEADER_FILES}
 )
 
 # Set include directory
@@ -54,14 +61,12 @@ target_link_libraries(rdf-canonicalization-cpp jsonld-cpp::jsonld-cpp)
 
 # Misc properties
 
-target_compile_features(rdf-canonicalization-cpp PRIVATE cxx_std_11)
+target_compile_features(rdf-canonicalization-cpp PRIVATE cxx_std_14)
 set_target_properties(rdf-canonicalization-cpp PROPERTIES CXX_EXTENSIONS OFF)
 
 # Set version
 
-target_compile_definitions(rdf-canonicalization-cpp PRIVATE -DRDFCANONCPP_VERSION_MAJOR=${RDFCANONCPP_VERSION_MAJOR})
-target_compile_definitions(rdf-canonicalization-cpp PRIVATE -DRDFCANONCPP_VERSION_MINOR=${RDFCANONCPP_VERSION_MINOR})
-target_compile_definitions(rdf-canonicalization-cpp PRIVATE -DRDFCANONCPP_VERSION_PATCH=${RDFCANONCPP_VERSION_PATCH})
+target_compile_definitions(rdf-canonicalization-cpp PRIVATE -DRDFCANONCPP_VERSION=${RDFCANONCPP_VERSION})
 
 if(RDFCANONCPP_BUILD_TESTS)
   enable_testing()

@@ -1,6 +1,9 @@
-#include <iostream>
-#include "rdf-canonicalization-cpp/RDFCanonicalizationProcessor.h"
-#include "rdf-canonicalization-cpp/Permutator.h"
+#include "rdf-canonicalization-cpp/detail/RDFCanonicalizationProcessor.h"
+
+#include <memory>
+#include <algorithm>
+#include <sstream>
+
 #include <jsonld-cpp/JsonLdProcessor.h>
 #include <jsonld-cpp/JsonLdError.h>
 #include <jsonld-cpp/NQuadsSerialization.h>
@@ -8,9 +11,11 @@
 #include <jsonld-cpp/RDFQuad.h>
 #include <jsonld-cpp/RDFTriple.h>
 #include <jsonld-cpp/RDFDataset.h>
-#include <jsonld-cpp/sha256.h>
-#include <jsonld-cpp/sha384.h>
 #include <jsonld-cpp/BlankNodeNames.h>
+
+#include "rdf-canonicalization-cpp/detail/Permutator.h"
+#include "rdf-canonicalization-cpp/detail/sha256.h"
+#include "rdf-canonicalization-cpp/detail/sha384.h"
 
 namespace {
 

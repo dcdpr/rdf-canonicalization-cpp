@@ -1,5 +1,5 @@
 #pragma ide diagnostic ignored "cert-err58-cpp"
-#include <rdf-canonicalization-cpp/Permutator.h>
+#include "rdf-canonicalization-cpp/detail/Permutator.h"
 
 #include <gtest/gtest.h>
 

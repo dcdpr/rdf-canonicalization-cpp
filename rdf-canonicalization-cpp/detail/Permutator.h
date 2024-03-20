@@ -2,7 +2,6 @@
 #define RDFCANON_CPP_PERMUTATOR_H
 
 #include <vector>
-#include <map>
 #include <string>
 
 
@@ -12,7 +11,7 @@ private:
     bool done;
 
 public:
-    explicit Permutator(std::vector <std::string> strings);
+    explicit Permutator(std::vector<std::string> strings);
     bool hasNext() const;
     std::vector<std::string> next();
 };

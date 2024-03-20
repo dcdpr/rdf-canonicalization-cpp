@@ -1,9 +1,15 @@
 #include "rdf-canonicalization-cpp/CanonicalizationProcessor.h"
-#include "rdf-canonicalization-cpp/RDFCanonicalizationProcessor.h"
-#include <jsonld-cpp/JsonLdProcessor.h>
-#include <jsonld-cpp/JsonLdError.h>
-#include <jsonld-cpp/RDFDataset.h>
+
+#include <sstream>
+
+#include <jsonld-cpp/MediaType.h>
+#include <jsonld-cpp/JsonLdOptions.h>
 #include <jsonld-cpp/RemoteDocument.h>
+#include <jsonld-cpp/RDFDataset.h>
+#include <jsonld-cpp/JsonLdError.h>
+#include <jsonld-cpp/JsonLdProcessor.h>
+
+#include "rdf-canonicalization-cpp/detail/RDFCanonicalizationProcessor.h"
 
 using RDF::RDFDataset;
 
