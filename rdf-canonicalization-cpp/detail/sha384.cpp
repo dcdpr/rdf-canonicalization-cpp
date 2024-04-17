@@ -1,6 +1,8 @@
 #include "rdf-canonicalization-cpp/detail/sha384.h"
 
 #include <cstring>
+#include <sstream>
+#include <iomanip>
 
 #define SHA2_SHFR(x, n)    (x >> n)
 #define SHA2_ROTR(x, n)   ((x >> n) | (x << ((sizeof(x) << 3) - n)))
@@ -143,15 +145,17 @@ std::string SHA384::final()
         SHA2_UNPACK64(m_h[i], &digest[i << 3])
     }
 
-    char buf[2*SHA384::DIGEST_SIZE+1];
-    buf[2*SHA384::DIGEST_SIZE] = 0;
-    for (unsigned int i = 0; i < SHA384::DIGEST_SIZE; i++)
-        sprintf(buf+i*2, "%02x", digest[i]);
+    std::stringstream ss;
+    for (unsigned char i : digest) {
+        ss << std::setfill('0') << std::setw(2)
+           << std::hex << std::noshowbase << std::nouppercase
+           << static_cast<int>(i);
+    }
 
     // Reset for next run
     init();
 
-    return {buf};
+    return ss.str();
 }
 
 void SHA384::transform(const unsigned char *message, std::size_t block_nb)
