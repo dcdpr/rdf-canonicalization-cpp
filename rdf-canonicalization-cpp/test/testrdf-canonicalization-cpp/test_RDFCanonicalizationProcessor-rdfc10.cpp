@@ -368,6 +368,14 @@ TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test075) {
     performCanonicalizeTestFromManifest("#test075c");
 }
 
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test076) {
+    performCanonicalizeTestFromManifest("#test076c");
+}
+
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test077) {
+    performCanonicalizeTestFromManifest("#test077c");
+}
+
 TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test003m) {
     performCanonicalizeTestFromManifest("#test003m");
 }
