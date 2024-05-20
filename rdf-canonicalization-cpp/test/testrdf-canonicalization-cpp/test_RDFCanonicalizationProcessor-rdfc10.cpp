@@ -98,117 +98,117 @@ std::string JsonLdProcessorCanonicalizeRdfc10Test::mainManifestName = "canonical
 std::map<std::string, TestCase> JsonLdProcessorCanonicalizeRdfc10Test::testCases;
 
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test001) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test001c) {
     performCanonicalizeTestFromManifest("#test001c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test002) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test002c) {
     performCanonicalizeTestFromManifest("#test002c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test003) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test003c) {
     performCanonicalizeTestFromManifest("#test003c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test004) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test004c) {
     performCanonicalizeTestFromManifest("#test004c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test005) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test005c) {
     performCanonicalizeTestFromManifest("#test005c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test006) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test006c) {
     performCanonicalizeTestFromManifest("#test006c");
 }
 
 // #test007c does not exist
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test008) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test008c) {
     performCanonicalizeTestFromManifest("#test008c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test009) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test009c) {
     performCanonicalizeTestFromManifest("#test009c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test010) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test010c) {
     performCanonicalizeTestFromManifest("#test010c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test011) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test011c) {
     performCanonicalizeTestFromManifest("#test011c");
 }
 
 // #test012c does not exist
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test013) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test013c) {
     performCanonicalizeTestFromManifest("#test013c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test014) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test014c) {
     performCanonicalizeTestFromManifest("#test014c");
 }
 
 // #test0015c does not exist
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test016) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test016c) {
     performCanonicalizeTestFromManifest("#test016c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test017) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test017c) {
     performCanonicalizeTestFromManifest("#test017c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test018) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test018c) {
     performCanonicalizeTestFromManifest("#test018c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test019) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test019c) {
     performCanonicalizeTestFromManifest("#test019c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test020) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test020c) {
     performCanonicalizeTestFromManifest("#test020c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test021) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test021c) {
     performCanonicalizeTestFromManifest("#test021c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test022) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test022c) {
     performCanonicalizeTestFromManifest("#test022c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test023) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test023c) {
     performCanonicalizeTestFromManifest("#test023c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test024) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test024c) {
     performCanonicalizeTestFromManifest("#test024c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test025) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test025c) {
     performCanonicalizeTestFromManifest("#test025c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test026) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test026c) {
     performCanonicalizeTestFromManifest("#test026c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test027) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test027c) {
     performCanonicalizeTestFromManifest("#test027c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test028) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test028c) {
     performCanonicalizeTestFromManifest("#test028c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test029) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test029c) {
     performCanonicalizeTestFromManifest("#test029c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test030) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test030c) {
     performCanonicalizeTestFromManifest("#test030c");
 }
 
@@ -216,33 +216,33 @@ TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test030) {
 
 // #test0032c does not exist
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test033) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test033c) {
     performCanonicalizeTestFromManifest("#test033c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test034) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test034c) {
     performCanonicalizeTestFromManifest("#test034c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test035) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test035c) {
     performCanonicalizeTestFromManifest("#test035c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test036) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test036c) {
     performCanonicalizeTestFromManifest("#test036c");
 }
 
 // #test037c does not exist
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test038) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test038c) {
     performCanonicalizeTestFromManifest("#test038c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test039) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test039c) {
     performCanonicalizeTestFromManifest("#test039c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test040) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test040c) {
     performCanonicalizeTestFromManifest("#test040c");
 }
 
@@ -250,129 +250,129 @@ TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test040) {
 
 // #test0042c does not exist
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test043) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test043c) {
     performCanonicalizeTestFromManifest("#test043c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test044) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test044c) {
     performCanonicalizeTestFromManifest("#test044c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test045) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test045c) {
     performCanonicalizeTestFromManifest("#test045c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test046) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test046c) {
     performCanonicalizeTestFromManifest("#test046c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test047) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test047c) {
     performCanonicalizeTestFromManifest("#test047c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test048) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test048c) {
     performCanonicalizeTestFromManifest("#test048c");
 }
 
 // #test0049c - #test0052c do not exist
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test053) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test053c) {
     performCanonicalizeTestFromManifest("#test053c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test054) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test054c) {
     performCanonicalizeTestFromManifest("#test054c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test055) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test055c) {
     performCanonicalizeTestFromManifest("#test055c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test056) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test056c) {
     performCanonicalizeTestFromManifest("#test056c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test057) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test057c) {
     performCanonicalizeTestFromManifest("#test057c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test058) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test058c) {
     performCanonicalizeTestFromManifest("#test058c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test059) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test059c) {
     performCanonicalizeTestFromManifest("#test059c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test060) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test060c) {
     performCanonicalizeTestFromManifest("#test060c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test061) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test061c) {
     performCanonicalizeTestFromManifest("#test061c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test062) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test062c) {
     performCanonicalizeTestFromManifest("#test062c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test063) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test063c) {
     performCanonicalizeTestFromManifest("#test063c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test064) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test064c) {
     performCanonicalizeTestFromManifest("#test064c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test065) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test065c) {
     performCanonicalizeTestFromManifest("#test065c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test066) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test066c) {
     performCanonicalizeTestFromManifest("#test066c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test067) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test067c) {
     performCanonicalizeTestFromManifest("#test067c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test068) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test068c) {
     performCanonicalizeTestFromManifest("#test068c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test069) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test069c) {
     performCanonicalizeTestFromManifest("#test069c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test070) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test070c) {
     performCanonicalizeTestFromManifest("#test070c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test071) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test071c) {
     performCanonicalizeTestFromManifest("#test071c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test072) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test072c) {
     performCanonicalizeTestFromManifest("#test072c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test073) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test073c) {
     performCanonicalizeTestFromManifest("#test073c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test074) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test074c) {
     performCanonicalizeTestFromManifest("#test074c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test075) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test075c) {
     performCanonicalizeTestFromManifest("#test075c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test076) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test076c) {
     performCanonicalizeTestFromManifest("#test076c");
 }
 
-TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test077) {
+TEST_F(JsonLdProcessorCanonicalizeRdfc10Test, canonicalize_rdfc10_test077c) {
     performCanonicalizeTestFromManifest("#test077c");
 }
 
